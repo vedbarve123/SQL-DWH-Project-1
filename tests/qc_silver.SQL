@@ -1,9 +1,23 @@
+/*
+============================================================================================================
+QUALITY CHECK DOCUMENT (SILVER LAYER)
+============================================================================================================
+
+Script Purpose:
+This script is used to check the quality of tables created in the silver schema. We want to see
+if the transformations have worked and there is no improper data. The basic codes are given 
+we can change the table names , column names for using a code with various tables.
+A newer more organised version is coming in next commits.
+
+*/
+
+
 --Checking for duplicate values in Primary Key column
 --Expectation:No Duplicates and no null values
 
-SELECT prd_id,count(*) FROM silver.crm_prd_info
-GROUP BY prd_id
-HAVING count(*)>1 OR prd_id IS NULL
+SELECT cst_id,count(*) as dups FROM silver.crm_cust_info
+GROUP BY cst_id
+HAVING count(*)>1 OR cst_id IS NULL
 
 --Check for unwanted spaces
 
