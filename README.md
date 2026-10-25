@@ -15,5 +15,8 @@ Customer Behaviour
 Product Performance
 Sales Trends
 
+Data Architecture:
+ ![alt text]((https://github.com/vedbarve123/SQL-DWH-Project-1/blob/main/docs/DWH%20Architecture.PNG)?raw=true) 
+
 License: MIT
 
